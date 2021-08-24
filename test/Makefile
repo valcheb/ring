@@ -1,6 +1,8 @@
 CFLAGS= -g -Wall
 INCLUDES = -I..
-SOURCES = ../ring.c
+SOURCES = ../ring.c ./main.c
 
-all:
-	gcc $(CFLAGS) $(INCLUDES) $(DEFINE) main.c $(SOURCES) -o test
+test: $(SOURCES)
+	gcc $(CFLAGS) $(INCLUDES) $(SOURCES) -o test
+
+all: test
